@@ -6,7 +6,7 @@ metadata:
   labels:
     kubeaddons.mesosphere.io/name: istio
   annotations:
-    catalog.kubeaddons.mesosphere.io/addon-revision: "1.6.12-0"
+    catalog.kubeaddons.mesosphere.io/addon-revision: "1.6.12-1"
     appversion.kubeaddons.mesosphere.io/istio: "1.6.12"
     appversion.kubeaddons.mesosphere.io/kiali: "1.18.0"
     appversion.kubeaddons.mesosphere.io/jaeger: "1.16.0"
@@ -33,6 +33,8 @@ spec:
     - name: azure
       enabled: false
     - name: gcp
+      enabled: false
+    - name: vsphere
       enabled: false
     - name: docker
       enabled: false

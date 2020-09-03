@@ -6,7 +6,7 @@ metadata:
   labels:
     kubeaddons.mesosphere.io/name: elasticsearchexporter
   annotations:
-    catalog.kubeaddons.mesosphere.io/addon-revision: "1.1.0-3"
+    catalog.kubeaddons.mesosphere.io/addon-revision: "1.1.0-4"
     appversion.kubeaddons.mesosphere.io/elasticsearchexporter: "1.1.0"
     values.chart.helm.kubeaddons.mesosphere.io/elasticsearchexporter: "https://raw.githubusercontent.com/mesosphere/charts/73fba37/stable/elasticsearch-exporter/values.yaml"
 spec:
@@ -18,6 +18,8 @@ spec:
     - name: azure
       enabled: true
     - name: gcp
+      enabled: true
+    - name: vsphere
       enabled: true
     - name: docker
       enabled: false

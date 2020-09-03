@@ -31,7 +31,7 @@ metadata:
     # on the cluster, this hack will trigger re-queue on Addons until one exists.
     kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
   annotations:
-    catalog.kubeaddons.mesosphere.io/addon-revision: "1.0.1-7"
+    catalog.kubeaddons.mesosphere.io/addon-revision: "1.0.1-8"
     values.chart.helm.kubeaddons.mesosphere.io/velero: "https://raw.githubusercontent.com/mesosphere/charts/5327e6a54fe70df550e894fd754541a4f71a9054/staging/velero/values.yaml"
 spec:
   namespace: velero
@@ -43,6 +43,8 @@ spec:
     - name: azure
       enabled: true
     - name: gcp
+      enabled: true
+    - name: vsphere
       enabled: true
     - name: none
       enabled: true
